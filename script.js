@@ -10,7 +10,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
     category: "design",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-    liveUrl: "https://example.com",
+    liveUrl: "https://muddassir-momin.github.io/Portfolio/",
     githubUrl: "https://github.com",
     featured: false,
     likes: 25,
