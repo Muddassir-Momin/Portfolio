@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muddassir Momin - Full-Stack Developer & Designer</title>
+    <meta name="description" content="Professional portfolio of Alex Johnson, a full-stack developer and UI/UX designer specializing in modern web applications.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-circle">
+                    <span>MM</span>
+                </div>
+                <div class="loading-ring"></div>
+            </div>
+            <div class="loading-text">
+                <h3>Loading Portfolio...</h3>
+                <p id="loading-status">Initializing...</p>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-percent" id="progress-percent">0%</div>
+        </div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="float-element float-1"></div>
+        <div class="float-element float-2"></div>
+        <div class="float-element float-3"></div>
+        <div class="float-element float-4"></div>
+        <div class="float-element float-5"></div>
+        <div class="float-element float-6"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Muddassir Momin</span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button></li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg">
+                <div class="bg-shape bg-shape-1"></div>
+                <div class="bg-shape bg-shape-2"></div>
+                <div class="bg-shape bg-shape-3"></div>
+            </div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-avatar">
+                        <div class="avatar-circle">
+                            <span>MM</span>
+                        </div>
+                        <div class="avatar-ring"></div>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Muddassir Momin</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">Full-Stack Developer & UI/UX Designer</p>
+                    
+                    <p class="hero-description">
+                        I create beautiful, functional, and user-centered digital experiences using HTML, CSS, JavaScript and modern web technologies. Let's build something amazing together!
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </button>
+                        <button class="btn btn-outline" onclick="scrollToSection('projects')">
+                            View My Work
+                            <i class="fas fa-arrow-down"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/Muddassir-Momin" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muddassir-momin-055611247" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number" data-target="5">0</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-target="2">0</div>
+                            <div class="stat-label">Years</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-target="1+">0</div>
+                            <div class="stat-label">Clients</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-target="99">0</div>
+                            <div class="stat-label">Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text reveal-left">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="about-content">
+                            <p>I'm a passionate full-stack developer with 2+ years of experience creating digital solutions that make a difference. My journey began with a curiosity about how things work, which led me to explore the intersection of technology and design.</p>
+                            
+                            <p>I specialize in building scalable web applications using HTML, CSS, JavaScript technologies. My approach combines technical expertise with creative problem-solving to deliver solutions that exceed expectations.</p>
+                            
+                            <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community through blog posts and speaking engagements.</p>
+                        </div>
+                        
+                        <div class="about-achievements">
+                            <div class="achievement">
+                                <i class="fas fa-award"></i>
+                                <div>
+                                    <h4>Certified Developer</h4>
+                                    <p>Startup India Entrepreneurship Certified</p>
+                                    <p>Google Cloud Certified</p>
+                                    <p>GE Aerospace HR Certified</p>
+                                    <p>TCS Young Professional Certified</p>
+                                </div>
+                            </div>
+
+                            <div class="achievement">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h4>Team Leader</h4>
+                                    <p>Led 1 development team</p>
+                                    <p>Managed Various Events</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-skills reveal-right">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-container">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML/CSS</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>C/C++</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Java</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="60%"></div>
+                                </div>
+                            </div>
+                            
+                             <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>UIUX</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                        
+                        <div class="skills-grid">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">C / C++</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">UIUX</span>
+                            
+                        </div>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-value">5+</div>
+                                <div class="stat-text">Projects</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">1+</div>
+                                <div class="stat-text">Clients</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">2+</div>
+                                <div class="stat-text">Years</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">99%</div>
+                                <div class="stat-text">Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">What I Do</h2>
+                    <p class="section-subtitle">I offer comprehensive solutions using modern technologies like HTML, CSS, JavaScript and more</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card reveal" data-delay="0">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Building modern websites with HTML, CSS, JavaScript. Creating responsive, fast, and SEO-optimized web applications.</p>
+                        <ul class="service-features">
+                            <li>Responsive Design</li>
+                            <li>Performance Optimization</li>
+                            <li>SEO Implementation</li>
+                            <li>Cross-browser Compatibility</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card reveal" data-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Development</h3>
+                        <p>Creating responsive mobile applications that work perfectly on all devices using React Native and modern mobile technologies.</p>
+                        <ul class="service-features">
+                            <li>React Native Apps</li>
+                            <li>Progressive Web Apps</li>
+                            <li>Mobile-First Design</li>
+                            <li>App Store Deployment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card reveal" data-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>Designing beautiful and user-friendly interfaces with modern design principles, focusing on user experience and accessibility.</p>
+                        <ul class="service-features">
+                            <li>User Interface Design</li>
+                            <li>User Experience Research</li>
+                            <li>Prototyping & Wireframing</li>
+                            <li>Design Systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card reveal" data-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                        <p>Building robust server-side applications with Node.js, Express.js, and database management using MySQL and MongoDB.</p>
+                        <ul class="service-features">
+                            <li>API Development</li>
+                            <li>Database Design</li>
+                            <li>Server Configuration</li>
+                            <li>Cloud Deployment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card reveal" data-delay="400">
+                        <div class="service-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Full-Stack Solutions</h3>
+                        <p>Complete end-to-end solutions from frontend to backend with MySQL and MongoDB databases, ensuring seamless integration.</p>
+                        <ul class="service-features">
+                            <li>Complete Web Applications</li>
+                            <li>E-commerce Solutions</li>
+                            <li>Content Management Systems</li>
+                            <li>Custom Web Platforms</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card reveal" data-delay="500">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Maintenance & Support</h3>
+                        <p>Ongoing maintenance, updates, and technical support to ensure your applications run smoothly and stay up-to-date.</p>
+                        <ul class="service-features">
+                            <li>Regular Updates</li>
+                            <li>Bug Fixes</li>
+                            <li>Performance Monitoring</li>
+                            <li>Technical Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Featured Work</h2>
+                    <p class="section-subtitle">A showcase of my recent projects built with HTML, CSS, JavaScript and modern web technologies</p>
+                </div>
+                
+                <!-- Project Filters -->
+                <div class="project-filters reveal">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web-app">Web Apps</button>
+                    <button class="filter-btn" data-filter="website">Websites</button>
+                    <button class="filter-btn" data-filter="mobile-app">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Project cards will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">What Clients Say</h2>
+                    <p class="section-subtitle">Don't just take my word for it. Here's what some of my clients have to say about working together.</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal" data-delay="0">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Working with Muddassir was an absolute pleasure. The attention to detail and creative solutions exceeded our expectations. Our website conversion rate increased by 40% after the redesign."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="muddassir.jpeg" alt="XYZ Client 1">
+                            </div>
+                            <div class="author-info">
+                                <h4>XYZ Client 1</h4>
+                                <p>ABC Role, XYZ Company</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card reveal" data-delay="100">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Muddassir delivered a stunning mobile app that our users love. The user experience is intuitive and the performance is exceptional. Highly recommend for any digital project."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="muddassir.jpeg" alt="XYZ Client 2">
+                            </div>
+                            <div class="author-info">
+                                <h4>XYZ Client 2</h4>
+                                <p>ABC Role, XYZ Company</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card reveal" data-delay="200">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"The branding work Muddassir did for us was transformative. Our brand now stands out in a crowded market and resonates perfectly with our target audience."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="muddassir.jpeg" alt="XYZ Client 3">
+                            </div>
+                            <div class="author-info">
+                                <h4>XYZ Client 3</h4>
+                                <p>ABC Role, XYZ Company</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card reveal" data-delay="300">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Professional, creative, and reliable. Muddassir took our vision and turned it into reality. The project was delivered on time and within budget."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="muddassir.jpeg" alt="XYZ Client 4">
+                            </div>
+                            <div class="author-info">
+                                <h4>XYZ Client 4</h4>
+                                <p>ABC Role, XYZ Company</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Ready to start your next project? Let's discuss how we can work together using HTML, CSS, JavaScript and Modern  technologies to bring your ideas to life.</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info reveal-left">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always excited to work on new projects. You just want to say hello, feel free to reach out!</p>
+                        
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>muddassirmomin01@gmail.com</p>
+                                    <a href="mailto:muddassirmomin01@gmail.com">Send Email</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Phone</h4>
+                                    <p>+91 88559 32826</p>
+                                    <a href="tel:+91 8855932826">Call Now</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Location</h4>
+                                    <p>Ichalkaranji Maharashtra, India</p>
+                                    <a href="#">View on Map</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Working Hours</h4>
+                                    <p>Mon - Fri: 9AM - 6PM</p>
+                                    <p>Weekend: Available for urgent projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-social">
+                            <h4>Follow Me</h4>
+                            <div class="social-links">
+                                <a href="https://github.com/Muddassir-Momin" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/muddassir-momin-055611247" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container reveal-right">
+                        <div class="form-header">
+                            <h3>Send a Message</h3>
+                            <p>Fill out the form and I'll get back to you as soon as possible.</p>
+                        </div>
+                        
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-development">Mobile Development</option>
+                                    <option value="ui-ux-design">UI/UX Design</option>
+                                    <option value="consultation">Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Project Budget</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-5k">Under $5,000</option>
+                                    <option value="5k-10k">$5,000 - $10,000</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k">$25,000 - $50,000</option>
+                                    <option value="over-50k">Over $50,000</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, timeline, and any specific requirements..." required></textarea>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Subscribe to my newsletter for web development tips and updates
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span class="btn-text">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </span>
+                                <span class="btn-loading">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    Sending...
+                                </span>
+                            </button>
+                        </form>
+                        
+                        <div class="form-success" id="form-success">
+                            <div class="success-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                            <button class="btn btn-outline" onclick="resetContactForm()">Send Another Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-text">Muddassir Momin</span>
+                    </div>
+                    <p>Full-Stack Developer & UI/UX Designer specializing in modern web technologies including HTML, CSS & JavaScript.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/Muddassir-Momin" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muddassir-momin-055611247" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Web Development</a></li>
+                            <li><a href="#services">Mobile Development</a></li>
+                            <li><a href="#services">UI/UX Design</a></li>
+                            <li><a href="#services">Backend Development</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:hello@alexjohnson.dev">muddassirmomin01@gmail.com</a></li>
+                            <li><a href="tel:+15551234567">+91 88559 32826</a></li>
+                            <li><a href="#contact">Muddassir Momin </a></li>
+                            <li><a href="#contact">Get In Touch</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Muddassir Momin. All rights reserved. Built with HTML, CSS, JavaScript and Modern web technologies.</p>
+                    <div class="footer-bottom-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be generated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
